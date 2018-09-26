@@ -31,7 +31,7 @@ tail -n+$ARCHIVE "$0" | tar zxm -C $TMP_DIR  > /dev/null 2>&1
 
 if [ $? -ne 0 ]
  then
- echo "uip run faild"
+ echo "rasip run faild"
  rm -rf $TMP_DIR
  exit 1;
 fi
@@ -42,7 +42,7 @@ cd $TMP_DIR
 ## main 
 
 # speak ip address
-mplayer looking $(hostname -I | cut -f1 -d " " | sed 's/\./d/g' | sed 's/./&\ /g') > /dev/null 2>&1
+mplayer -speed 1.5 looking $(hostname -I | cut -f1 -d " " | sed 's/\./d/g' | sed 's/./&\ /g') > /dev/null 2>&1
 # delay
 sleep 3
 # play started sound
