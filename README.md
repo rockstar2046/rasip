@@ -10,13 +10,13 @@ Speak ip address  on Raspberry PI
 # Install
 `curl -L https://raw.githubusercontent.com/rockagen/rasip/master/rasip.sh -o rasip.sh`
 
-`chmod u+x raspi.sh`
+`chmod u+x rasip.sh`
 
 # Run
-`./raspi.sh`
+`./rasip.sh`
 
 or enable auto after system boot
 
-`mv raspi.sh /etc/init.d`
+`mv rasip.sh /etc/init.d`
 
 happy enjoy!
