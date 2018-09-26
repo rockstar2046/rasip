@@ -19,4 +19,7 @@ or enable auto after system boot
 
 `mv rasip.sh /etc/init.d`
 
+# custom
+vim `_rasip.sh`, then execute `./make.sh` will build `build/rasip.sh` file
+
 happy enjoy!
