@@ -17,7 +17,9 @@ Speak ip address  on Raspberry PI
 
 or enable auto after system boot
 
-`mv rasip.sh /etc/init.d`
+`sudo mv rasip.sh /etc/init.d/rasip`
+
+`sudo update-rc.d rasip defaults 99`
 
 # custom
 vim `_rasip.sh`, then execute `./make.sh` will build `build/rasip.sh` file
