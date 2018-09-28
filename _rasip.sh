@@ -12,6 +12,7 @@
 # Author: RA <rockagen@gmail.com>
 
 
+
 do_start(){
 	# check command
 	type  awk sed tar mplayer > /dev/null 2>&1
@@ -40,12 +41,16 @@ do_start(){
 	cd $TMP_DIR
 
     ## main 
+
+    # language
+    _LAN=`echo $LANG | cut -f1 -d '_'`
+    [ ! -d "${_LAN}" ] && _LAN=en
     # speak ip address
-    mplayer -speed 1.5 looking $(hostname -I | cut -f1 -d " " | sed 's/\./d/g' | sed 's/./&\ /g') > /dev/null 2>&1
+    cd ${_LAN} && mplayer -speed 1.5 looking $(hostname -I | cut -f1 -d " " | sed 's/\./d/g' | sed 's/./&\ /g') > /dev/null 2>&1
     # delay
-    sleep 3
+    sleep 3 
     # play started sound
-    mplayer start.ogg welcome.flac > /dev/null 2>&1
+    cd .. && mplayer start.mp3 > /dev/null 2>&1
     
     # rm tmp dir
     rm -rf $TMP_DIR

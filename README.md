@@ -8,7 +8,12 @@ Speak ip address  on Raspberry PI
 `mplayer` sound palyer
 
 # Install
-`curl -L https://raw.githubusercontent.com/rockagen/rasip/master/rasip.sh -o rasip.sh`
+`curl -L https://raw.githubusercontent.com/rockagen/rasip/master/bin/rasip_zh.sh -o rasip.sh`
+
+or with language, this depend on your `$LANG` value
+
+`curl -L https://raw.githubusercontent.com/rockagen/rasip/master/bin/rasip.sh -o rasip.sh`
+
 
 `chmod u+x rasip.sh`
 
@@ -21,7 +26,7 @@ or enable auto after system boot
 
 `sudo update-rc.d rasip defaults 99 `
 
-# custom
+# Custom
 vim `_rasip.sh`, then execute `./make.sh` will build `build/rasip.sh` file
 
 happy enjoy!
